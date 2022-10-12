@@ -20,4 +20,7 @@ firebase.initializeApp(firebaseConfig);
 const projectFirestore = firebase.firestore()
 const projectAuth = firebase.auth()
 
-export { projectFirestore, projectAuth }
+//timestamp --> special object to pass create at to an object related to firebase
+const timestamp = firebase.firestore.Timestamp
+
+export { projectFirestore, projectAuth, timestamp }

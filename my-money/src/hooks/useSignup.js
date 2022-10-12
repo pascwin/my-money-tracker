@@ -16,8 +16,7 @@ export const useSignup = () => {
             //signup user
             const res = await projectAuth.createUserWithEmailAndPassword(email, password)
 
-
-            if (!res) {
+            if (!res.ok) {
                 throw new Error("could not complete signup")
             }
             //add display name to user
@@ -34,9 +33,10 @@ export const useSignup = () => {
 
         } catch (err) {
             if (!isCancelled) {
+                console.log(err)
                 console.log(err.message)
                 setError(err.message);
-                setIsPending(true);
+                setIsPending(false);
             }
         }
     }
