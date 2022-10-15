@@ -17,7 +17,6 @@ const TransactionList = ({ transactions }) => {
                     )
                 })
             }
-
         </ul>
     )
 }
